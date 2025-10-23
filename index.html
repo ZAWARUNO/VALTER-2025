@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALTER 2025 — Co-volution: Evolve With Intelligence</title>
+    <link
+      rel="icon"
+      href="assets/Copy of logoValter.png"
+      sizes="32x32"
+      type="image/png"
+    />
+
+    <!-- Tailwind (utility-first, CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Animate.css for simple in-view animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Swiper for slider -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Tailwind custom theme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+          "cp-purple": "#2B0B3E",
+          "cp-gold": "#D4AF37",
+          "cp-magenta": "#E0008C",
+          "cp-ink": "#0C0A10",
+          "cp-cream": "#FAF7F2",
+          "cp-cyan": "#66E3FF",
+          // Tambahan: Variasi ungu
+          "cp-lavender": "#E6E6FA",   // Lavender lembut untuk background ringan
+          "cp-violet": "#EE82EE",     // Violet cerah untuk highlight
+          "cp-orchid": "#DA70D6",     // Orchid untuk elemen interaktif
+          "cp-indigo": "#4B0082",     // Indigo gelap untuk kontras
+          "cp-plum": "#DDA0DD",       // Plum untuk variasi ungu-pink
+          // Warna lain untuk variasi
+          "cp-navy": "#001F3F",       // Biru gelap untuk background alternatif
+          "cp-emerald": "#50C878",    // Hijau untuk success/accent
+          "cp-crimson": "#DC143C"     // Merah untuk warning/error
+        },
+            fontFamily: {
+              sans: [
+                "Poppins",
+                "Arial",
+                "Helvetica",
+                "ui-sans-serif",
+                "system-ui",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-cp-ink text-cp-cream font-sans antialiased">
+    <!-- Decorative background layers (creative element) -->
+    <div aria-hidden="true" class="fixed inset-0 -z-10 overflow-hidden">
+      <img
+        src="assets/Copy of background-09.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover opacity-40"
+      />
+      <div
+        class="absolute inset-0 bg-[radial-gradient(1000px_700px_at_20%_10%,rgba(208,0,140,0.20),transparent),radial-gradient(800px_600px_at_80%_20%,rgba(102,227,255,0.15),transparent)]"
+      ></div>
+      <div class="grid-bg opacity-[0.15]"></div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 w-full z-50 border-b border-cp-gold/30 backdrop-blur-md bg-cp-purple/70"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between"
+      >
+        <a href="#home" class="flex items-center gap-3 group">
+          <span
+            class="relative w-9 h-9 rounded-full ring-1 ring-cp-gold/70 overflow-hidden flex items-center justify-center bg-cp-purple/80"
+          >
+            <img
+              src="assets/Copy of logoValter.png"
+              alt="Logo VALTER"
+              class="object-contain"
+              onerror="this.style.display='none'"
+            />
+          </span>
+          <span class="font-semibold tracking-wide">VALTER 2025</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a class="nav-link" href="#home">Home</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#features">Highlights</a>
+          <a class="nav-link" href="#teaser">Teaser</a>
+          <a class="nav-link" href="#kegiatan">Kegiatan</a>
+          <a class="nav-link" href="#timeline">Timeline</a>
+          <a class="btn-outline" href="#sponsor">Sponsor</a>
+        </nav>
+
+        <button
+          id="mobile-menu-button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="md:hidden p-2 rounded-md text-cp-cream hover:bg-white/10"
+        >
+          <svg
+            id="icon-open"
+            class="w-6 h-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="icon-close"
+            class="w-6 h-6 hidden"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+<div
+  id="mobile-menu"
+  class="md:hidden hidden border-t border-cp-gold/20 bg-cp-purple/90 backdrop-blur-xl fixed inset-x-0 bottom-0 z-50 transform transition-transform duration-300 translate-y-full"
+>
+  <div class="px-6 py-4">
+    <div class="grid grid-cols-2 gap-y-3 gap-x-4 text-base font-medium">
+      <a class="nav-link-mobile" href="#home">Home</a>
+      <a class="nav-link-mobile" href="#about">About</a>
+      <a class="nav-link-mobile" href="#features">Highlights</a>
+      <a class="nav-link-mobile" href="#teaser">Teaser</a>
+      <a class="nav-link-mobile" href="#kegiatan">Kegiatan</a>
+      <a class="nav-link-mobile" href="#timeline">Timeline</a>
+    </div>
+
+    <div class="mt-5 pt-4 border-t border-cp-gold/20">
+      <a
+        href="#sponsor"
+        class="btn-primary col-span-2 text-center" href="#sponsor"
+            >Sponsor
+      </a>
+    </div>
+
+    <p class="text-xs text-center text-cp-cream/50 mt-4">VALTER 2025 • Co-volution</p>
+  </div>
+</div>
+    </header>
+
+    <main>
+      <!-- HERO / HOME -->
+      <section
+        id="home"
+        class="pt-24 md:pt-28 min-h-[92vh] flex items-center relative"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+            <!-- Left: Heading + CTA + Countdown -->
+            <div>
+              <span
+                class="inline-flex items-center gap-2 text-cp-cyan/90 text-xs tracking-wider uppercase"
+              >
+                <span
+                  class="w-2 h-2 rounded-full bg-cp-magenta animate-pulse"
+                ></span>
+                Co-volution: Evolve With Intelligence
+              </span>
+              <h1
+                class="mt-3 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight glofium"
+              >
+                VALTER 2025
+                <span
+                  class="block text-transparent bg-clip-text bg-gradient-to-r from-cp-gold via-cp-magenta to-cp-cyan glofium"
+                  >Web Design Competition</span
+                >
+              </h1>
+              <p class="mt-4 text-cp-cream/90 max-w-xl">
+                Rayakan evolusi kecerdasan buatan dalam kehidupan sehari-hari.
+                Rancang pengalaman digital yang futuristik, human-centered, dan
+                bertanggung jawab.
+              </p>
+
+              <div class="mt-6 flex flex-wrap items-center gap-3">
+                <a href="#sponsor" class="btn-primary">Daftar / Partner</a>
+                <a href="#timeline" class="btn-outline">Lihat Timeline</a>
+              </div>
+
+              <!-- Countdown Timer -->
+              <div
+                class="mt-8 glass-panel p-5 rounded-xl border border-cp-gold/20 w-full max-w-xl"
+              >
+                <h2
+                  class="text-base font-semibold text-cp-gold mb-3 text-center"
+                >
+                  Hitung Mundur Event
+                </h2>
+                <div class="grid grid-cols-4 gap-3 text-center text-sm">
+                  <div class="glass-chip">
+                    <div id="days" class="text-2xl font-bold text-cp-gold">
+                      00
+                    </div>
+                    <div class="opacity-70">Hari</div>
+                  </div>
+                  <div class="glass-chip">
+                    <div id="hours" class="text-2xl font-bold text-cp-gold">
+                      00
+                    </div>
+                    <div class="opacity-70">Jam</div>
+                  </div>
+                  <div class="glass-chip">
+                    <div id="minutes" class="text-2xl font-bold text-cp-gold">
+                      00
+                    </div>
+                    <div class="opacity-70">Menit</div>
+                  </div>
+                  <div class="glass-chip">
+                    <div id="seconds" class="text-2xl font-bold text-cp-gold">
+                      00
+                    </div>
+                    <div class="opacity-70">Detik</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Visual slider / guest star -->
+            <div class="relative">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide: Guest Star -->
+                  <div class="swiper-slide">
+                    <div
+                      class="glass-panel p-4 rounded-xl border border-cp-gold/20"
+                    >
+                      <div
+                        class="relative h-64 md:h-80 w-full overflow-hidden rounded-lg"
+                      >
+                        <img
+                          src="assets/Guest Star/Copy of guestStarCropped.png"
+                          alt="Guest Star"
+                          class="w-full h-full object-cover object-[70%_30%]"
+                          onerror="this.style.display='none'"
+                        />
+                        <div
+                          class="absolute inset-0 flex items-center justify-center"
+                        >
+                        </div>
+                      </div>
+                      <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cp-gold">
+                          Special Guest
+                        </h3>
+                        <p class="text-cp-cream/80">
+                          Bintang tamu spesial akan hadir memeriahkan rangkaian
+                          VALTER 2025.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide: Events highlight -->
+                  <div class="swiper-slide">
+                    <div
+                      class="glass-panel p-4 rounded-xl border border-cp-gold/20"
+                    >
+                      <div
+                        class="relative h-64 md:h-80 w-full overflow-hidden rounded-lg"
+                      >
+                        <img
+                          src="assets/Copy of bukaRelawan.png"
+                          alt="Event Highlights"
+                          class="w-full h-full object-contain"
+                        />
+                      </div>
+                      <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cp-gold">
+                          Event Highlights
+                        </h3>
+                        <p class="text-cp-cream/80">
+                          Web Design, Video Campaign, E-Sport, Seminar, dan
+                          banyak lagi.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide: Logo / branding -->
+                  <div class="swiper-slide">
+                    <div
+                      class="glass-panel p-4 rounded-xl border border-cp-gold/20"
+                    >
+                      <div
+                        class="relative h-64 md:h-80 w-full overflow-hidden rounded-lg flex items-center justify-center bg-cp-purple/40"
+                      >
+                        <img
+                          src="assets/Copy of logotypeValter.png"
+                          alt="Logotype VALTER"
+                          class="max-h-24 md:max-h-40 object-contain"
+                          onerror="this.style.display='none'"
+                        />
+                      </div>
+                      <div class="mt-4">
+                        <h3 class="text-xl font-bold text-cp-gold">
+                          VALTER 2025
+                        </h3>
+                        <p class="text-cp-cream/80">
+                          Kolaborasi, inovasi, dan evolusi kecerdasan buatan
+                          untuk generasi masa depan.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- ABOUT -->
+<section id="about" class="section-space">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <img src="assets/Copy of comicHeaderExported.png" alt="VALTER 2025 Banner" class="w-full mb-8 h-auto">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="section-title glofium">Apa itu Valter</h2>
+        <p class="mt-3 text-cp-cream/90">
+          VALTER Festival Multimedia & Komputer merupakan salah satu event tahunan HMJ TEKNIK KOMPUTER POLITEKNIK NEGERI SRIWIJAYA. Tahun ini, VALTER hadir lebih dekat dengan dunia content creator dengan mengusung tema <b class="text-cp-magenta">"Co-volution: Evolve With Intelligence"</b>. Disini rangkaian acara seru siap menemani kamu! Mulai dari pelatihan, 3 kompetisi digital, hingga seminar inspiratif sebagai acara puncak! Saatnya wujudkan ide kreatifmu, kolaborasikan dengan teknologi, dan jadilah bagian dari energi baru di dunia digital! VALTER 2025 - Imajinasi Ciptakan Inovasi!
+        </p>
+        <div class="mt-5 flex gap-3">
+          <a href="#media" class="btn-primary">Tonton Teaser</a>
+          <a href="#kegiatan" class="btn-outline">Lihat Kegiatan</a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <div class="relative w-full h-72 md:h-80 lg:h-96 neon-orb">
+          <!-- purely decorative orb -->
+          <div
+            class="absolute inset-0 rounded-full bg-gradient-to-tr from-cp-magenta/40 via-cp-cyan/30 to-transparent blur-2xl"
+          ></div>
+          <div
+            class="absolute inset-0 ring-2 ring-cp-gold/30 rounded-full"
+          ></div>
+          <div
+            class="absolute inset-8 rounded-full border border-white/10"
+          ></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <img src="assets/Copy of logotypeValter.png" alt="valter" class="w-32 md:w-40 lg:w-72 object-contain" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES / HIGHLIGHTS -->
+<section id="features" class="section-space">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title text-center glofium">Highlights VALTER 2025</h2>
+    <p class="mt-2 text-center text-cp-cream/80 max-w-2xl mx-auto">Guest star & pembicara inspiratif</p>
+    <div class="mt-10 flex flex-col lg:flex-row items-center justify-between gap-8 relative">
+      <!-- Left Card: Kevin Anggara -->
+      <div class="guest-card w-1/2 lg:w-1/4 relative rounded-xl overflow-hidden border border-cp-gold/20 shadow-lg">
+        <img src="assets/Guest Star/Copy of guestStarCropped.png" alt="Kevin Anggara" class="w-full h-auto object-cover">
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-cp-ink/90 to-transparent">
+          <h3 class="font-bold text-cp-magenta">KEVIN ANGGARA</h3>
+          <p class="text-sm text-cp-cream/80">Content Creator & Entrepreneur</p>
+        </div>
+      </div>
+      
+      <!-- Center Text with Arrows -->
+      <div class="center-text relative w-3/4 lg:w-1/2 text-center p-6 bg-cp-purple/50 rounded-xl border border-cp-gold/30 backdrop-blur-md shadow-xl z-10">
+        <h3 class="text-xl font-bold text-cp-gold mb-4">Meet Our Highlights</h3>
+        <p class=" mb-4"><span class="text-cp-magenta">Kevin Anggara</span> Content creator visioner yang ahli dalam menggabungkan storytelling digital dengan teknologi inovatif. Hadir untuk workshop interaktif dan sesi Q&A eksklusif!.</p>
+        <p class=""><span class="text-cp-cyan">Siti Safira</span> Influencer dan desainer multimedia berhijab yang menginspirasi generasi muda. Akan memimpin seminar tentang kreativitas berdaya bersama AI dan teknologi!</p>
+        
+        <!-- Arrows (using simple divs for pointing effect) -->
+        <div class="hidden lg:flex absolute left-[-50px] top-1/2 transform -translate-y-1/2 w-12 h-12 bg-cp-magenta rounded-full items-center justify-center text-white font-bold"> < </div>
+        <div class="hidden lg:flex absolute right-[-50px] top-3/4 transform -translate-y-1/2 w-12 h-12 bg-cp-cyan rounded-full items-center justify-center text-white font-bold">></div>
+      </div>
+      
+      <!-- Right Card: Siti Safira -->
+      <div class="guest-card w-1/2 lg:w-1/4 relative rounded-xl overflow-hidden border border-cp-gold/20 shadow-lg">
+        <img src="assets/Guest Star/Copy of safira.png" alt="Siti Safira" class="w-full h-auto object-cover">
+        <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-cp-ink/90 to-transparent">
+          <h3 class="font-bold text-cp-cyan">SITI SAFIRA</h3>
+          <p class="text-sm text-cp-cream/80">Editor & Speaker</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      <!-- MEDIA / TEASER -->
+<section id="teaser" class="relative m-6 rounded-lg text-cp-cream py-12 lg:py-16 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+    <h2 class="text-4xl lg:text-5xl font-extrabold glofium text-cp-gold mb-4 animate__animated animate__fadeIn">
+      Teaser VALTER 2025
+    </h2>
+    <p class="text-cp-cream/80 text-sm lg:text-base mb-6 max-w-2xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
+      Intip keseruan gelaran VALTER melalui cuplikan singkat beriktu. Gunakan ini sebagai bahan promosi dan pemanasan menuju hari-H.
+    </p>
+    <div class="relative w-full max-w-4xl mx-auto">
+      <!-- Video Player -->
+      <video controls class="w-full rounded-xl shadow-lg border-2 border-cp-gold/30 bg-cp-purple/50 animate__animated animate__fadeInUp animate__delay-2s">
+        <source src="assets/TRAILER VALTER/TRAILER VALTER.mp4" type="video/mp4">
+        Maaf, browser Anda tidak mendukung pemutaran video.
+      </video>
+      <div class="mt-4 flex flex-col lg:flex-row items-center justify-center gap-6">
+        <ul class="text-left text-cp-cream/90 space-y-2 mb-4 lg:mb-0 animate__animated animate__fadeInUp animate__delay-3s">
+          <li class="flex items-center"><span class="text-cp-magenta mr-2">•</span> Singkat, padat, nendang.</li>
+          <li class="flex items-center"><span class="text-cp-magenta mr-2">•</span> Visual unik, ciri khas VALTER.</li>
+          <li class="flex items-center"><span class="text-cp-magenta mr-2">•</span>Tema Co-volution</li>
+        </ul>
+        <a href="assets/TRAILER VALTER/TRAILER VALTER.mp4" download class="btn-teaser inline-flex items-center justify-center px-6 py-3 bg-cp-purple/80 rounded-full text-cp-gold font-bold border-2 border-cp-gold/50 shadow-lg hover:bg-cp-magenta hover:text-cp-cream transition-all duration-300 animate__animated animate__pulse animate__delay-4s">
+          Download Video
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Background Decorative -->
+  <div class="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-cp-purple to-transparent opacity-50"></div>
+</section>
+
+      <!-- EVENT KEGIATAN -->
+      <section id="kegiatan" class="section-space">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 class="section-title text-center glofium">Rangkaian Kegiatan</h2>
+          <p class="mt-2 text-center text-cp-cream/80 max-w-2xl mx-auto">
+            Ikuti berbagai kompetisi dan kegiatan pendukung untuk mengasah
+            kemampuan dan menambah wawasan.
+          </p>
+
+          <!-- TRAIN SLIDER SECTION -->
+          <div class="mt-12 mb-16 relative h-64 md:h-80 rounded-2xl border p-2 md:p-6 xl:p-8 overflow-hidden"
+            style="background: linear-gradient(to bottom, rgba(107, 70, 193, 0.2), rgba(26, 26, 46, 0.4)); border-color: rgba(255, 215, 0, 0.2);">
+
+            <!-- Railway Track (background) -->
+            <div class="absolute bottom-0 left-0 w-full h-16 md:h-24 opacity-80">
+              <img src="assets/Copy of kel reketa.png" alt="Railway" class="w-full h-full object-cover" onerror="this.style.display='none'"/>
+            </div>
+
+            <!-- Train Container -->
+            <div class="train-container relative h-full flex items-end justify-center  overflow-auto train-scroll">
+
+
+              <!-- Flatcars with Logos -->
+              <div class="w-auto flatcars-row flex items-end ml-2 md:ml-4">
+              <!-- Locomotive -->
+              <img src="assets/kereta.png" alt="Lokomotif"
+                class="locomotive-train w-32 md:w-48 h-32 md:h-48 object-contain rounded-lg shadow-2xl"
+                onerror="this.style.display='none'"/>
+             <!-- Flatcar 1: Web Design -->
+             <div class="flatcar-item group relative">
+               <img src="assets/Logo Kegiatan Valter/Copy of WebDes.png" alt="Web Design"
+                 class="logo-train w-16 md:w-24 h-16 md:h-24 object-contain transition-transform group-hover:scale-110" onerror="this.style.display='none'"/>
+               <img src="assets/Copy of papanKeretaVer2.png" alt="Papan" class="flatcar-train w-32 md:w-40 h-auto object-contain"/>
+               <!-- Hover Tooltip -->
+               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+              <div class="bg-cp-emerald text-cp-cream px-3 py-2 rounded-lg text-xs md:text-sm font-semibold whitespace-nowrap shadow-lg">
+                Lomba Web Design
+              </div>
+               </div>
+             </div>
+
+             <!-- Flatcar 2: Video Campaign -->
+             <div class="flatcar-item group relative">
+               <img src="assets/Logo Kegiatan Valter/Copy of VidCamp.png" alt="Video Campaign"
+                 class="logo-train w-16 md:w-24 h-16 md:h-24 object-contain transition-transform group-hover:scale-110" onerror="this.style.display='none'"/>
+               <img src="assets/Copy of papanKeretaVer2.png" alt="Papan" class="flatcar-train w-32 md:w-40 h-auto object-contain"/>
+               <!-- Hover Tooltip -->
+               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-40">
+              <div class="bg-cp-crimson text-cp-cream px-3 py-2 rounded-lg text-xs md:text-sm font-semibold whitespace-nowrap shadow-lg">
+                Video Campaign
+              </div>
+               </div>
+             </div>
+
+             <!-- Flatcar 3: E-Sport -->
+             <div class="flatcar-item group relative">
+               <img src="assets/Logo Kegiatan Valter/Copy of Mole.png" alt="E-Sport"
+                 class="logo-train w-16 md:w-24 h-16 md:h-24 object-contain transition-transform group-hover:scale-110" onerror="this.style.display='none'"/>
+               <img src="assets/Copy of papanKeretaVer2.png" alt="Papan" class="flatcar-train w-32 md:w-40 h-auto object-contain"/>
+               <!-- Hover Tooltip -->
+               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-40">
+              <div class="bg-cp-cyan/95 text-cp-cream px-3 py-2 rounded-lg text-xs md:text-sm font-semibold whitespace-nowrap shadow-lg">
+                E-Sport (MLBB)
+              </div>
+               </div>
+             </div>
+
+
+             <!-- Flatcar 5: Pelatihan -->
+             <div class="flatcar-item group relative">
+               <img src="assets/Logo Kegiatan Valter/Copy of logoPelatihan.png" alt="Pelatihan"
+                 class="logo-train w-16 md:w-24 h-16 md:h-24 object-contain transition-transform group-hover:scale-110" onerror="this.style.display='none'"/>
+               <img src="assets/Copy of papanKeretaVer2.png" alt="Papan" class="flatcar-train w-32 md:w-40 h-auto object-contain"/>
+               <!-- Hover Tooltip -->
+               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-40">
+              <div class="bg-cp-gold/95 text-cp-cream px-3 py-2 rounded-lg text-xs md:text-sm font-semibold whitespace-nowrap shadow-lg">
+                Pelatihan
+              </div>
+               </div>
+             </div>
+
+                          <!-- Flatcar 4: Seminar -->
+             <div class="flatcar-item group relative">
+               <img src="assets/Copy of Telephone.png" alt="Seminar"
+                 class="logo-train w-16 md:w-24 h-16 md:h-24 object-contain transition-transform group-hover:scale-110" onerror="this.style.display='none'"/>
+               <img src="assets/Copy of papanKeretaVer2.png" alt="Papan" class="flatcar-train w-32 md:w-40 h-auto object-contain"/>
+               <!-- Hover Tooltip -->
+               <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-40">
+              <div class="bg-cp-magenta/95 text-cp-cream px-3 py-2 rounded-lg text-xs md:text-sm font-semibold whitespace-nowrap shadow-lg">
+                Seminar
+              </div>
+               </div>
+             </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Original Event Cards Grid -->
+          <div class="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Web Design -->
+            <div class="event-card" onclick="openEventModal('webdesign', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterWebDes-02.png"
+                alt="Poster Web Design"
+                class="event-poster object-[100%_60%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Logo Kegiatan Valter/Copy of WebDes.png"
+                    alt="Logo Web Design"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">Lomba Web Design</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Bangun landing page inovatif bertema AI yang fungsional dan
+                  estetis.
+                </p>
+              </div>
+            </div>
+            <!-- Video Campaign -->
+            <div class="event-card" onclick="openEventModal('videocampaign', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterVidCamp-02.png"
+                alt="Poster Video Campaign"
+                class="event-poster object-[100%_60%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Logo Kegiatan Valter/Copy of VidCamp.png"
+                    alt="Logo Video Campaign"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">Video Campaign</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Kampanye video kreatif untuk menyuarakan perubahan positif.
+                </p>
+              </div>
+            </div>
+            <!-- E-Sport (MLBB) -->
+            <div class="event-card" onclick="openEventModal('esport', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterMole-02.png"
+                alt="Poster E-Sport"
+                class="event-poster object-[100%_60%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Logo Kegiatan Valter/Copy of Mole.png"
+                    alt="Logo E-Sport"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">E-Sport (MLBB)</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Kompetisi e-sport seru untuk menantang strategi dan kerja tim.
+                </p>
+              </div>
+            </div>
+            <!-- Seminar -->
+            <div class="event-card" onclick="openEventModal('seminar', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterSeminar-01.png"
+                alt="Poster Seminar"
+                class="event-poster object-[100%_45%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Copy of Telephone.png"
+                    alt="Ikon Seminar"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">Seminar</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Wawasan dari praktisi mengenai AI, desain, dan pengembangan.
+                </p>
+              </div>
+            </div>
+            <!-- Pelatihan -->
+            <div class="event-card" onclick="openEventModal('pelatihan', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterPelatihan-01.png"
+                alt="Poster Pelatihan"
+                class="event-poster object-[100%_40%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Logo Kegiatan Valter/Copy of logoPelatihan.png"
+                    alt="Logo Pelatihan"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">Pelatihan</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Sesi praktik untuk meningkatkan skill teknis dan kreatif.
+                </p>
+              </div>
+            </div>
+            <!-- Additional (optional) -->
+            <div class="event-card"  onclick="openEventModal('challenge', this)">
+              <img
+                src="assets/Poster Kegiatan/Copy of posterLomba-02.png"
+                alt="Poster Lomba"
+                class="event-poster object-[100%_40%]"
+              />
+              <div class="p-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <img
+                    src="assets/Copy of MVP EMBLEM.png"
+                    alt="Emblem"
+                    class="w-9 h-9 object-contain"
+                  />
+                  <h3 class="font-bold text-lg">Special Challenge</h3>
+                </div>
+                <p class="text-cp-cream/80 text-sm">
+                  Tantangan mini dengan hadiah menarik selama rangkaian event.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+        <!-- Modal -->
+  <div id="eventModal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeEventModal()">×</button>
+<div class="poster-wrapper">
+  <div class="flip-container">
+    <div class="flipper">
+        <div class="card-face card-front">
+            <img id="modalPosterFront" src="" alt="Event Poster" class="w-full h-full object-cover">
+            <div class="shine-effect"></div>
+        </div>
+
+        <div class="card-face card-back">
+            <img id="modalPosterBack" src="" alt="Event Poster" class="w-full h-full object-cover">
+            </div>
+    </div>
+</div>
+  <button class="expand-poster-btn" onclick="togglePosterExpand()">
+    🔍 <!-- Icon expand -->
+  </button>
+</div>
+
+      <!-- Registration Form -->
+<div class="form-container">
+    <h2 class="text-4xl font-extrabold mb-2 text-yellow-400 font-script" id="formTitle"></h2>
+
+    <div id="event-description">
+        </div>
+
+    <button onclick="scrollToForm()" class="submit-btn w-full mb-6">
+        Daftar Sekarang!
+    </button>
+
+ <div id="timeline-info-container" class="bg-gray-800/50 p-4 rounded-lg mb-6 overflow-x-auto">
+    <h4 class="text-lg font-bold text-yellow-400 text-center
+        sticky top-0 inset-x-0 z-10 
+        bg-gray-800/50 py-4 mb-4
+        shadow-lg">Timeline</h4>
+    
+    <div id="timeline-horizontal" class="timeline-wrapper">
+        </div>
+</div>
+
+<div id="payment-info-container" class="bg-gray-800/50 p-4 rounded-lg mb-6">
+    <h4 class="text-lg font-bold text-yellow-400 mb-4 text-center">Pembayaran & Kontak</h4>
+
+    <div id="payment-info-cards" class="flex flex-wrap justify-center gap-4 mb-4">
+        </div>
+    
+    <div id="contact-info" class="text-center">
+        </div>
+</div>
+
+
+
+        <div class="my-6">
+    <h3 class="text-xl font-bold text-yellow-400 mb-4" id="registration-title">
+        FORMULIR PENDAFTARAN
+    </h3>
+    
+    <div class="flex space-x-4 mb-4" id="form-switcher">
+        <button id="btn-mahasiswa" onclick="switchForm('mahasiswa')" class="px-4 py-2 rounded-lg font-bold bg-yellow-400 text-purple-900 shadow-lg">
+            Mahasiswa
+        </button>
+        <button id="btn-umum" onclick="switchForm('umum')" class="px-4 py-2 rounded-lg font-bold bg-gray-600 text-white shadow-lg">
+            Umum
+        </button>
+    </div>
+</div>
+
+<form id="form-mahasiswa" onsubmit="handleSubmit(event)" class="space-y-4">
+    <label class="block text-yellow-400 mb-2 font-semibold">Nama Tim</label>
+    <input type="text" required class="form-input" placeholder="ex: Aruna Agnivesha." name="nama_tim_m">
+    
+    <label class="block text-yellow-400 mb-2 font-semibold">Nomor Whatsapp Aktif</label>
+    <input type="tel" required class="form-input" placeholder="ex: 0869..." name="wa_m">
+
+    <label class="block text-yellow-400 mb-2 font-semibold">Asal Institusi / Komunitas</label>
+    <input type="text" required class="form-input" placeholder="ex: Politeknik Negeri Sriwijaya" name="institusi_m">
+    
+<label class="block text-yellow-400 mb-2 font-semibold">Bukti Pembayaran</label>
+        <input type="file" id="payment-proof-m" name="bukti_pembayaran_m" 
+          accept=".jpg,.jpeg,.png" required class="hidden" 
+          onchange="updateFileName(this, 'proof-display-m')">
+      
+        <label for="payment-proof-m" id="proof-display-m" 
+          class="border-2 border-dashed border-yellow-400/50 p-6 text-center rounded-lg cursor-pointer block hover:border-yellow-400 transition-colors">
+        Serek & lepas gambar di sini atau klik untuk mengubah (JPG, JPEG, PNG, maks 500KB)
+    </label>
+
+    <h4 class="text-lg font-bold text-yellow-400 pt-4">Daftar Peserta</h4>
+    <div id="peserta-list-m" class="space-y-4">
+      <div class="flex items-end space-x-4">
+        <div class="flex-1">
+          <label class="block text-gray-300 mb-2">#1 NPM</label>
+          <input type="text" class="form-input" placeholder="ex: 0624..." name="npm_1">
+        </div>
+        <div class="flex-1">
+          <label class="block text-gray-300 mb-2">Nama</label>
+          <input type="text" required class="form-input" placeholder="ex: Timothy R." name="nama_1">
+        </div>
+      </div>
+    </div>
+    <button type="button" onclick="addPeserta('mahasiswa')" class="submit-btn px-4 py-2 text-sm">
+      + Tambah peserta
+    </button>
+
+    <div class="flex items-start pt-4">
+      <input type="checkbox" required class="mt-1 mr-3">
+      <label class="text-sm text-gray-300">* Saya menyatakan bahwa data yang saya berikan adalah benar dan bersedia memenuhi seluruh ketentuan Pendaftaran VALTER 2025.</label>
+    </div>
+
+    <button type="submit" class="submit-btn w-full mt-4">Submit</button>
+    <button type="button" class="bg-gradient-to-br from-cp-violet to-cp-magenta py-3 px-8 rounded-lg font-bold cursor-pointer hover:-translate-y-1 hover:shadow-cp-violet shadow-lg transition-all text-white w-full">Cek status pendaftaran</button>
+</form>
+
+<form id="form-umum" onsubmit="handleSubmit(event)" class="space-y-4 hidden">
+    <label class="block text-yellow-400 mb-2 font-semibold">Nama Tim</label>
+    <input type="text" required class="form-input" placeholder="ex: Aruna Agnivesha." name="nama_tim_u">
+    
+    <label class="block text-yellow-400 mb-2 font-semibold">Nomor Whatsapp Aktif</label>
+    <input type="tel" required class="form-input" placeholder="ex: 0869..." name="wa_u">
+
+    <label class="block text-yellow-400 mb-2 font-semibold">Asal Instansi / Komunitas</label>
+    <input type="text" required class="form-input" placeholder="ex: BlackRock" name="institusi_u">
+    
+<label class="block text-yellow-400 mb-2 font-semibold">Bukti Pembayaran</label>
+        <input type="file" id="payment-proof-u" name="bukti_pembayaran_u" 
+          accept=".jpg,.jpeg,.png" required class="hidden" 
+          onchange="updateFileName(this, 'proof-display-u')">
+      
+        <label for="payment-proof-u" id="proof-display-u" 
+          class="border-2 border-dashed border-yellow-400/50 p-6 text-center rounded-lg cursor-pointer block hover:border-yellow-400 transition-colors">
+        Serek & lepas gambar di sini atau klik untuk mengubah (JPG, JPEG, PNG, maks 500KB)
+    </label>
+
+    <h4 class="text-lg font-bold text-yellow-400 pt-4">Daftar Peserta</h4>
+    <div id="peserta-list-u" class="space-y-4">
+      <div class="flex items-end space-x-4">
+        <div class="flex-1">
+          <label class="block text-gray-300 mb-2">#1 Nama</label>
+          <input type="text" required class="form-input" placeholder="ex: Timothy R." name="nama_u_1">
+        </div>
+      </div>
+    </div>
+    <button type="button" onclick="addPeserta('umum')" class="submit-btn px-4 py-2 text-sm">
+      + Tambah peserta
+    </button>
+
+    <div class="flex items-start pt-4">
+      <input type="checkbox" required class="mt-1 mr-3">
+      <label class="text-sm text-gray-300">* Saya menyatakan bahwa data yang saya berikan adalah benar dan bersedia memenuhi seluruh ketentuan Pendaftaran VALTER 2025.</label>
+    </div>
+
+    <button type="submit" class="submit-btn w-full mt-4">Submit</button>
+    <button type="button" class="bg-gradient-to-br from-cp-violet to-cp-magenta py-3 px-8 rounded-lg font-bold cursor-pointer hover:-translate-y-1 hover:shadow-cp-violet shadow-lg transition-all text-white w-full">Cek status pendaftaran</button>
+</form>
+</div>
+    </div>
+  </div>
+
+      <!-- TIMELINE -->
+<section id="timeline" class="section-space">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="section-title text-center glofium">Timeline VALTER 2025</h2>
+        <p class="mt-2 text-center text-cp-cream/80 max-w-2xl mx-auto">
+            Rencana jadwal pelaksanaan.
+        </p>
+
+        <ol
+            class="mt-10 relative border-s border-cp-gold/20 max-w-3xl mx-auto"
+        >
+            <li class="timeline-item" data-date="2025-10-13">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                    <h3 class="font-semibold">Pembukaan</h3>
+                    <p class="text-cp-cream/80 text-sm">Senin, 13 Oktober 2025</p>
+                </div>
+            </li>
+            
+            <li class="timeline-item" data-date="2025-10-22">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                    <h3 class="font-semibold">Pelaksanaan Pelatihan Content Creator</h3>
+                    <p class="text-cp-cream/80 text-sm">Senin, 20 Okt s.d. Rabu, 22 Okt 2025</p>
+                </div>
+            </li>
+            
+            <li class="timeline-item" data-date="2025-10-25">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                    <h3 class="font-semibold">Esport & Presentasi Lomba Web Design</h3>
+                    <p class="text-cp-cream/80 text-sm">Sabtu, 25 Oktober 2025</p>
+                </div>
+            </li>
+            
+            <li class="timeline-item" data-date="2025-10-27">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                    <h3 class="font-semibold">Presentasi Lomba Video Campaign</h3>
+                    <p class="text-cp-cream/80 text-sm">Rabu, 27 Oktober 2025</p>
+                </div>
+            </li>
+            
+            <li class="timeline-item" data-date="2025-10-30">
+                <div class="timeline-dot"></div>
+                <div class="timeline-body">
+                    <h3 class="font-semibold">Penutupan</h3>
+                    <p class="text-cp-cream/80 text-sm">Kamis, 30 Oktober 2025</p>
+                </div>
+            </li>
+        </ol>
+    </div>
+</section>
+      <!-- PARTNER / SPONSORSHIP -->
+<section id="sponsor" class="section-space">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+      <div>
+        <div class="flex justify-center lg:justify-start mb-6"> 
+          <img 
+            src="assets/Copy of tivaFaceFixExported.png" 
+            alt="VALTER Character TV" 
+            class="w-48 h-auto object-contain" 
+          />
+        </div>
+        <h2 class="section-title">Open Partner & Sponsorship</h2>
+        <p class="mt-3 text-cp-cream/90">
+          Mari berkembang bersama VALTER! Dukung talenta muda dan dapatkan
+          eksposur brand melalui rangkaian acara.
+        </p>
+        <ul class="mt-4 space-y-2 text-cp-cream/85">
+          <li>• Brand exposure (on-site & digital)</li>
+          <li>• Booth & product demo (sesuai paket)</li>
+          <li>• Logo placement di materi promosi</li>
+          <li>• Kesempatan talk session</li>
+        </ul>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#" class="btn-primary">Unduh Proposal</a>
+          <a
+            href="https://wa.me/6200000000000"
+            class="btn-outline"
+            target="_blank"
+            rel="noopener"
+            >Kontak WhatsApp</a
+          >
+        </div>
+        <p class="mt-3 text-xs text-cp-cream/60">
+          Email: official@valter.id • IG: @valter.official
+        </p>
+      </div>
+      <div>
+        <div class="glass-panel p-5 lg:mt-64 rounded-xl border border-cp-gold/20">
+          <h3 class="font-semibold text-lg">Slogan / Call-to-Action</h3>
+          <p class="mt-2 text-cp-cream/85">
+            Join the co-volution: kolaborasi manusia dan AI untuk masa
+            depan yang lebih baik.
+          </p>
+          <div class="mt-4 grid sm:grid-cols-2 gap-3">
+            <div class="tier-card">
+              <h4 class="font-semibold">Silver</h4>
+              <ul class="mt-2 text-sm text-cp-cream/80 space-y-1">
+                <li>• Logo di website</li>
+                <li>• Mention media sosial</li>
+              </ul>
+            </div>
+            <div class="tier-card">
+              <h4 class="font-semibold">Gold</h4>
+              <ul class="mt-2 text-sm text-cp-cream/80 space-y-1">
+                <li>• Semua benefit Silver</li>
+                <li>• Booth kecil</li>
+              </ul>
+            </div>
+            <div class="tier-card">
+              <h4 class="font-semibold">Platinum</h4>
+              <ul class="mt-2 text-sm text-cp-cream/80 space-y-1">
+                <li>• Semua benefit Gold</li>
+                <li>• Talk session 10 menit</li>
+              </ul>
+            </div>
+            <div class="tier-card">
+              <h4 class="font-semibold">Media Partner</h4>
+              <ul class="mt-2 text-sm text-cp-cream/80 space-y-1">
+                <li>• Kolaborasi promosi</li>
+                <li>• Akses dokumentasi</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-20 border-t border-white/10 bg-black/30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div>
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/Copy of logoValter.png"
+                alt="Logo VALTER"
+                class="w-9 h-9 object-contain"
+                onerror="this.style.display='none'"
+              />
+              <span class="font-semibold">VALTER 2025</span>
+            </div>
+            <p class="mt-3 text-sm text-cp-cream/70">
+              Co-volution: Evolve With Intelligence
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold">Navigasi</h4>
+            <ul class="mt-3 space-y-2 text-sm">
+              <li><a class="hover:text-cp-gold" href="#about">About</a></li>
+              <li>
+                <a class="hover:text-cp-gold" href="#kegiatan">Kegiatan</a>
+              </li>
+              <li>
+                <a class="hover:text-cp-gold" href="#timeline">Timeline</a>
+              </li>
+              <li><a class="hover:text-cp-gold" href="#sponsor">Sponsor</a></li>
+            </ul>
+          </div>
+      <div>
+        <h4 class="font-semibold">Ikuti Kami</h4>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a href="https://www.instagram.com/valterpolsri/" target="_blank" class="hover:text-cp-gold flex items-center gap-2">
+              <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="#ffffff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" fill="#ffffff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#ffffff"></path> </g></svg> Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+        </div>
+        <div class="mt-8 text-xs text-cp-cream/60">
+          © 2025 VALTER. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Local Scripts -->
+    <script src="scripts.js" defer></script>
+  </body>
+</html>
